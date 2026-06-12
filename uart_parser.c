@@ -9,7 +9,7 @@
  * - Inter-byte Timeout Handling
  * - Automatic Recovery after Timeout
  *
- * Author: Kamlesh Kshirsagar
+ * 
  */
 
 #include <stdio.h>
@@ -215,7 +215,7 @@ int main(void)
 {
     UARTParser parser;
 
-    printf("\n========== TEST 1 : VALID FRAME ==========\n");
+    printf("\n TEST 1 : VALID FRAME\n");
 
     parser_init(&parser, 50);
 
@@ -231,7 +231,7 @@ int main(void)
 
     feed_stream(&parser, test1, time1, sizeof(test1));
 
-    printf("\n========== TEST 2 : TIMEOUT RECOVERY ==========\n");
+    printf("\nTEST 2 : TIMEOUT RECOVERY\n");
 
     parser_init(&parser, 50);
 
@@ -249,7 +249,7 @@ int main(void)
 
     feed_stream(&parser, test2, time2, sizeof(test2));
 
-    printf("\n========== TEST 3 : TWO VALID FRAMES ==========\n");
+    printf("\nTEST 3 : TWO VALID FRAMES\n");
 
     parser_init(&parser, 50);
 
@@ -267,7 +267,7 @@ int main(void)
 
     feed_stream(&parser, test3, time3, sizeof(test3));
 
-    printf("\n========== TEST 4 : TIMEOUT DISABLED ==========\n");
+    printf("\nTEST 4 : TIMEOUT DISABLED\n");
 
     parser_init(&parser, 0);
 
